@@ -4,7 +4,6 @@ import com.code.bean.Table;
 import com.code.handler.MvcHandler;
 import com.code.handler.TableHandler;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,9 +16,9 @@ public class Genterator {
         MvcHandler mvcHandler = new MvcHandler();
         List<Table> tableList = tableHandler.getTables();
         for (Table table : tableList) {
-//            mvcHandler.executeModule(table);//0k
-//            mvcHandler.executeMapper(table);//ok
-//            mvcHandler.executeClazzMapper(table);//ok
+            mvcHandler.executeEntity(table);//0k
+            mvcHandler.executeMapper(table);//ok
+            mvcHandler.executeClazzMapper(table);//ok
 
 //              common模块对应的client接口
 //              mvcHandler.executeClient_dm_common(table);//ok

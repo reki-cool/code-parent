@@ -17,10 +17,11 @@ public class MvcHandler {
     String templateFile = Constant.template_path;
 
     /**
-     * 生成Module模块
+     * 生成实体类文件（entity包）
+     * 前提：所有数据库的表名都是小写形式，单词间以下划线隔开
      * @param table
      */
-    public void executeModule(Table table) {
+    public void executeEntity(Table table) {
         Map input = new HashMap();
         input.put("table", table);
         input.put("package", "dm");
@@ -30,8 +31,8 @@ public class MvcHandler {
         String fileName = table.getClassName() + ".java";
         // 获取model保存路径
         String savePath = Constant.model_save_path;
-        String templateName = "model";
-        // 生成目标文件
+        String templateName = "entity";
+        // 生成实体类文件
         FreeMarkerUtils.genteratorFile(input, templateFile, templateName, savePath, fileName);
     }
 
