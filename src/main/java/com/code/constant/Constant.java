@@ -5,9 +5,10 @@ package com.code.constant;
  */
 public class Constant {
 
+    // 当前工程中用来存放模板引擎文件的目录，这些模板文件是用来生成代码的
     public static String template_path = "E:\\javawork\\code-parent\\src\\main\\resources\\dm";
 
-    // Model生成地址，这里用来存放数据库表对应的实体类
+    // 用来存放实体类(entity)的目录
     public static String model_save_path = "E:\\javawork\\common\\dm-common\\dm-common-module\\src\\main\\java\\cn\\dm\\pojo";
 
     public static String mapper_save_path = "E:\\javawork\\common\\dm-common\\dm-common-dao\\src\\main\\resources\\mapper";
