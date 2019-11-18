@@ -31,6 +31,7 @@ public class MvcHandler {
         // 获取model保存路径
         String savePath = Constant.model_save_path;
         String templateName = "model";
+        // 生成目标文件
         FreeMarkerUtils.genteratorFile(input, templateFile, templateName, savePath, fileName);
     }
 
