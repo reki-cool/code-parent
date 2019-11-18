@@ -1,5 +1,5 @@
-package cn.${package}.mapper;
-import cn.${package}.pojo.${table.className};
+package ${mapperPackage};
+import ${entityPackage}.${table.className};
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;

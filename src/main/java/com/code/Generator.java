@@ -7,18 +7,21 @@ import com.code.handler.TableHandler;
 import java.util.List;
 
 /**
- * Created by dm
+ * Created by duyanhan
  */
-public class Genterator {
+public class Generator {
 
     public static void main(String args[]) throws Exception {
         TableHandler tableHandler = new TableHandler();
         MvcHandler mvcHandler = new MvcHandler();
         List<Table> tableList = tableHandler.getTables();
         for (Table table : tableList) {
-            mvcHandler.executeEntity(table);//0k
-            mvcHandler.executeMapper(table);//ok
-            mvcHandler.executeClazzMapper(table);//ok
+            // 逆向生成实体类文件
+            mvcHandler.generateEntity(table);//0k
+            // 逆向生成Mapper接口对应的XML文件
+            mvcHandler.generateMapperXML(table);//ok
+            // 逆向生成Mapper接口文件
+            mvcHandler.generateClazzMapper(table);//ok
 
 //              common模块对应的client接口
 //              mvcHandler.executeClient_dm_common(table);//ok
